@@ -99,13 +99,13 @@ class FleetVC: UIViewController {
         var hintText: String
         if (shipIds.count > 0) {
             let level = Fleet.instance.getFleetLevel(index: index)
-            var speed = "高速"
+            var speed = "Fleet Speed: High"
             if (Fleet.instance.getFleetSpeedType(index: index) == .SLOW) {
-                speed = "低速"
+                speed = "Fleet Speed: Slow"
             }
             let airPower = Fleet.instance.getFleetAirPower(index: index)
             let scout = floor(Fleet.instance.getFleetScout(index: index) * 100) / 100
-            hintText = "Lv. \(level) / \(speed) / 制空：\(airPower[0])-\(airPower[1]) / 索敵：\(scout)"
+            hintText = "Lv. \(level) / \(speed) / Fighter Power：\(airPower[0])-\(airPower[1]) / Detection：\(scout)"
         } else {
             hintText = ""
         }

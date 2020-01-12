@@ -68,7 +68,7 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
             let retryCount = Setting.getRetryCount()
             let tag = (URLProtocol.property(forKey: Constants.TAG, in: request) as? Int ?? 0) + 1
             if (tag <= retryCount) {
-                Toast(text: "第\(tag)次重试").show()
+                Toast(text: "Retry Connection: \(tag)").show()
                 loadResponseFromWeb()
             } else {
                 self.client?.urlProtocol(self, didFailWithError: e)

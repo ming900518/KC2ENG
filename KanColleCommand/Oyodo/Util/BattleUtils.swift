@@ -9,19 +9,19 @@ func buildHeadingStr(heading: Int) -> String {
     var result = ""
     switch (heading) {
     case 1:
-        result = "同航戰"
+        result = "Parallel"
         break
     case 2:
-        result = "反航戰"
+        result = "Head-on"
         break
     case 3:
-        result = "T有利"
+        result = "T Advantage"
         break
     case 4:
-        result = "T不利"
+        result = "T Disadvantage"
         break
     default:
-        result = "航向未知"
+        result = "Engagement Form Unknown"
         break
     }
     return result
@@ -31,22 +31,22 @@ func buildAirCommandStr(air: Int) -> String {
     var result = ""
     switch (air) {
     case 0:
-        result = "航空均衡"
+        result = "Air Parity"
         break
     case 1:
-        result = "制空權確保"
+        result = "Air Supremacy"
         break
     case 2:
-        result = "航空優勢"
+        result = "Air Superiority"
         break
     case 3:
-        result = "航空劣勢"
+        result = "Air Denial"
         break
     case 4:
-        result = "制空權喪失"
+        result = "Air Incapability"
         break
     default:
-        result = "制空權未知"
+        result = "Air State Unknown"
         break
     }
     return result

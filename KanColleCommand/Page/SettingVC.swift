@@ -32,7 +32,7 @@ class SettingVC: UIViewController {
         }
 
         let titleText = UILabel()
-        titleText.text = "iKanColleCommand Tweaked - Chinese Traditional"
+        titleText.text = "iKanColleCommand Tweaked - English"
         titleText.textColor = UIColor.black
         titleBar.addSubview(titleText)
         titleText.snp.makeConstraints { maker in
@@ -55,7 +55,7 @@ class SettingVC: UIViewController {
         }
 
         let closeBtn = UIButton(type: .system)
-        closeBtn.setTitle("關閉", for: .normal)
+        closeBtn.setTitle("Close", for: .normal)
         closeBtn.addTarget(self, action: #selector(close), for: .touchUpInside)
         titleBar.addSubview(closeBtn)
         closeBtn.snp.makeConstraints { maker in
@@ -104,25 +104,25 @@ extension SettingVC: UITableViewDelegate {
                     popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
                     popoverController.permittedArrowDirections = []
                 }
-                selector.addAction(UIAlertAction(title: "確定", style: .default) { action in
+                selector.addAction(UIAlertAction(title: "Confirm", style: .default) { action in
                     let selected = picker.selectedRow(inComponent: 0)
                     print("Selected : \(selected)")
                     Setting.saveRetryCount(value: selected)
                     self.settingTable.reloadData()
                     print("[INFO] New retry setting has been set.")
                 })
-                selector.addAction(UIAlertAction(title: "取消", style: .cancel))
+                selector.addAction(UIAlertAction(title: "Cancel", style: .cancel))
                 self.present(selector, animated: true)
             } else if (indexPath.row == 1) {
                 print("[INFO] Cleaner started by user.")
-                let dialog = UIAlertController(title: nil, message: "使用須知\n\n1. 這功能會清空App所下載的Caches和Cookies\n2. 下次遊戲載入時就會重新下載Caches，Cookies會自動重設\n3. 清除完畢後會開啟登入方式切換器", preferredStyle: .actionSheet)
+                let dialog = UIAlertController(title: nil, message: "Notice\n\n1. This function will clear the Caches and Cookies downloaded by the App.\n2. The Caches will be downloaded again when the game is loaded next time, and the cookies will be reset automatically.\n3. After clearing, the login mode switcher will be opened.", preferredStyle: .actionSheet)
                 if let popoverController = dialog.popoverPresentationController {
                     popoverController.sourceView = self.view
                     popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
                     popoverController.permittedArrowDirections = []
                 }
-                dialog.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
-                dialog.addAction(UIAlertAction(title: "我暸解了，執行清理", style: .destructive) { action in
+                dialog.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                dialog.addAction(UIAlertAction(title: "Clean", style: .destructive) { action in
                     print("[INFO] Cleaner confirmed by user. Start cleaning.")
                     if let cookies = HTTPCookieStorage.shared.cookies {
                         for cookie in cookies {
@@ -143,19 +143,19 @@ extension SettingVC: UITableViewDelegate {
                         print("[INFO] Homepage opened.")
                     }
             } else if (indexPath.row == 1) {
-                let dialog = UIAlertController(title: "請選擇渠道", message: nil, preferredStyle: .actionSheet)
+                let dialog = UIAlertController(title: "Please select a channel", message: nil, preferredStyle: .actionSheet)
                 if let popoverController = dialog.popoverPresentationController {
                     popoverController.sourceView = self.view
                     popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
                     popoverController.permittedArrowDirections = []
                 }
-                dialog.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
-                dialog.addAction(UIAlertAction(title: "支付寶", style: .default) { action in
+                dialog.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                dialog.addAction(UIAlertAction(title: "Alipay", style: .default) { action in
                     if let url = URL(string: "https://qr.alipay.com/tsx04467wmwmuqfxcmwmt7e") {
                         UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
                     }
                 })
-                dialog.addAction(UIAlertAction(title: "微信", style: .default) { action in
+                dialog.addAction(UIAlertAction(title: "Weixin", style: .default) { action in
                     if let url = URL(string:"https://ming900518.github.io/page/wechat_qrcode.png") {
                         UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
                     }
@@ -187,14 +187,14 @@ extension SettingVC: UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDa
             if (indexPath.row == 0) {
                 let cell = UITableViewCell(style: .value1, reuseIdentifier: cellIdentifier)
                 cell.backgroundColor = UIColor.white
-                cell.textLabel?.text = "連接重試次數 (0為不重試)"
+                cell.textLabel?.text = "Connection retries (Disable when set to 0)"
                 cell.detailTextLabel?.text = "\(Setting.getRetryCount())"
                 cell.accessoryType = .disclosureIndicator
                 return cell
             } else if (indexPath.row == 1) {
                 let cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
                 cell.backgroundColor = UIColor.white
-                cell.textLabel?.text = "清理舊Caches和Cookies"
+                cell.textLabel?.text = "Clean Caches and Cookies"
                 cell.accessoryType = .disclosureIndicator
                 return cell
             }
@@ -202,7 +202,7 @@ extension SettingVC: UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDa
             if (indexPath.row == 0) {
                 let cell = UITableViewCell(style: .value1, reuseIdentifier: cellIdentifier)
                 cell.backgroundColor = UIColor.white
-                cell.textLabel?.text = "當前版本"
+                cell.textLabel?.text = "Version"
                 if let versionCode = Bundle.main.infoDictionary?["CFBundleShortVersionString"] {
                     cell.detailTextLabel?.text = "\(versionCode)"
                 }
@@ -210,22 +210,22 @@ extension SettingVC: UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDa
             } else if (indexPath.row == 1) {
                 let cell = UITableViewCell(style: .value1, reuseIdentifier: cellIdentifier)
                 cell.backgroundColor = UIColor.white
-                cell.textLabel?.text = "程式功能"
-                cell.detailTextLabel?.text = "基本遊戲、輔助程式、大破警告、Cookies修改"
+                cell.textLabel?.text = "Features"
+                cell.detailTextLabel?.text = "Toolkit, Heavily Damaged Warnings, Cookie Modifications"
                 return cell
             }
         } else if (indexPath.section == 2) {
             if (indexPath.row == 0) {
                 let cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
                 cell.backgroundColor = UIColor.white
-                cell.textLabel?.text = "前往修改版官方網站"
+                cell.textLabel?.text = "Tweaked Version Official Website"
                 cell.accessoryType = .disclosureIndicator
                 return cell
             } else if (indexPath.row == 1) {
                 let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
                 cell.backgroundColor = UIColor.white
-                cell.textLabel?.text = "捐贈原作者（非修改版作者）"
-                cell.detailTextLabel?.text = "支持原本的大佬吧～我就不用了，大家玩得開心最重要"
+                cell.textLabel?.text = "Donate to Original Author"
+                cell.detailTextLabel?.text = "Any support will be appreciated."
                 cell.detailTextLabel?.textColor = UIColor.lightGray
                 cell.accessoryType = .disclosureIndicator
                 return cell

@@ -121,9 +121,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
 
     @objc func confirmRefresh() {
-        let dialog = UIAlertController(title: nil, message: "前往登入方式切換器", preferredStyle: .alert)
-        dialog.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
-        dialog.addAction(UIAlertAction(title: "確定", style: .default) { action in
+        let dialog = UIAlertController(title: nil, message: "Open Login Mode Switcher", preferredStyle: .alert)
+        dialog.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        dialog.addAction(UIAlertAction(title: "Confirm", style: .default) { action in
             self.reloadGame()
         })
         present(dialog, animated: true)
