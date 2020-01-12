@@ -1,38 +1,36 @@
-# iKanColleCommand with Chinese Traditional Translation
-修改自原作者NGA用戶亖葉(UID42542015)於2019年7月4號發佈的iKanColleCommand專案，提供iOS用戶穩定的艦隊收藏遊戲環境和基本的輔助程式功能。
+# iKanColleCommand with English Translation
+The iKanColleCommand project released by the original author NGA user Yu Ye (亖葉, UID42542015) on July 4, 2019, provides a stable Kantai Collection game environment and basic toolkit for iOS users.
 
-[NGA帖子連結](https://ngabbs.com/read.php?tid=17767319)
+[NGA post link] (https://ngabbs.com/read.php?tid=17767319)
 
-[原版源碼GitHub連結](https://github.com/lhc-clover/iKanColleCommand)
+[Original GitHub link] (https://github.com/lhc-clover/iKanColleCommand)
 
-本修改版使沒有使用VPN遊玩艦隊收藏及使用繁體中文的玩家也可以使用這個App。
+This modified version allows players who do not use VPN to play Kantai Collection and use English as main language to use this app.
 
-修改項目請至[這裏](https://forum.gamer.com.tw/C.php?bsn=24698&snA=20053&tnum=5&bPage=2)查看
+This project will not be used for profit, and according to the original author's requirements, no form of fee is allowed.
 
-本專案不會用於盈利，根據原作者要求也不允許任何形式的收費。
+Reposting should indicate the original author-NGA user Yan Ye (亖葉, UID42542015) and the link to this page.
 
-轉發需註明原作者-NGA用戶亖葉(UID42542015)及本頁面的連結。
+## How to install (ETA S0N)
 
-## 如何安裝 (大陆地区用户请使用[这里](https://github.com/ming900518/iKanColleCommand)的版本)
-
-#### [點此查看最新正式版](https://github.com/ming900518/KC2CHT/releases/tag/Release2.2)
-#### [點此加入Cydia軟體源](https://kc2tweaked.github.io/repo/)
+#### ~~[Click here to view the latest official version] (https://github.com/ming900518/KC2ENG/releases/)~~
+#### ~~[Click here to join Cydia source] (https://kc2tweaked.github.io/repo/)~~
 
 
-#### 目前最新正式版本為1.0(TW.CHT.Release2.2)，我強烈建議使用最新正式版本進行遊玩。(更新日期:2019/11/14)
-#### 由於本人沒有iOS 12的裝置可以Debug，且本程式已支援iOS 13，如遇到不預期的問題請更新iOS至最新版，謝謝。
+#### Currently the latest official version is 1.0 (ENG.Release.etas0n), I strongly recommend using the latest official version. (Updated: TBD)
+#### Since I do not have an iOS 12 device to debug, and the program already supports iOS 13, if you encounter unexpected problems, please update iOS to the latest version.
 
-理論上支援所有iOS 11.4以上的所有iDevice（iPhone 5及更舊的32位元設備不支援）
+Supports all iDevices above iOS 11.4 in theory (not supported by iPhone 5 and older 32-bit devices)
 
-源碼可能和發佈的版本有差，還請想自己編譯的提督注意。
+The source code may be different from the released version.
 
-原作者由於Apple不給審核，已經暫緩本程式的更新計畫，主版本將維持在1.0直到原作者發佈更新，本人仍會努力修復現有Bug，也希望有Swift程式設計經驗的提督能協助程式的完善。
+The original author has suspended the update plan of the program. The main version will remain at 1.0 until the original author releases the update. I will still work to fix the existing bugs. I also hope that the Swift programming experience can help to update the program.
 
-#### 由於Apple更新了簽名要求，請至[官網](http://kc2tweaked.github.io)查看最新安裝方式！
+#### As Apple has updated the signing requirements, please go to [Official Website] (http://kc2tweaked.github.io) to see the latest installation method!
 
-有越獄用戶可透過Cydia軟體源下載。
+Jailbreak users can download through Cydia source.
 
-## 聯繫我(Bug回報或功能建議)
-[Email](mailto:ming900518@gmail.com)
+## Contact me (Bug report or feature suggestion)
+[Email] (mailto: ming900518@gmail.com)
 
-[Twitter（請直接DM我）](https://twitter.com/mingchang137)
+[Twitter (please DM me)] (https://twitter.com/mingchang137)
