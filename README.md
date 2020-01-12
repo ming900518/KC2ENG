@@ -11,13 +11,13 @@ This project will not be used for profit, and according to the original author's
 
 Reposting should indicate the original author-NGA user Yan Ye (亖葉, UID42542015) and the link to this page.
 
-## How to install (ETA S0N)
+## How to install
 
-#### ~~[Click here to view the latest official version](https://github.com/ming900518/KC2ENG/releases/)~~
-#### ~~[Click here to join Cydia source](https://kc2tweaked.github.io/repo/)~~
+#### [Click here to view the latest official version](https://github.com/ming900518/KC2ENG/releases/tag/Release2.2.1)
+#### [Click here to join Cydia source](https://kc2tweaked.github.io/repo/)
 
 
-#### Currently the latest official version is 1.0 (ENG.Release.etas0n), I strongly recommend using the latest official version. (Updated: TBD)
+#### Currently the latest official version is 1.0 (ENG-Release 2.2.1), I strongly recommend using the latest official version. (Updated: 2020/01/12)
 #### Since I do not have an iOS 12 device to debug, and the program already supports iOS 13, if you encounter unexpected problems, please update iOS to the latest version.
 
 Supports all iDevices above iOS 11.4 in theory (not supported by iPhone 5 and older 32-bit devices)
