@@ -31,6 +31,6 @@ The original author has suspended the update plan of the program. The main versi
 Jailbreak users can download through Cydia source.
 
 ## Contact me (Bug report or feature suggestion)
-[Email](mailto: ming900518@gmail.com)
+[Email](mailto:ming900518@gmail.com)
 
 [Twitter (please DM me)](https://twitter.com/mingchang137)
