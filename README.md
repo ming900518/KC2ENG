@@ -1,4 +1,9 @@
 # iKanColleCommand with English Translation
+
+### Due to my busy academic schedule, it is difficult to maintain the update in the three languages. The Simplified Chinese and English versions will be suspended from now on. (The latest version is Release 2.2 and Release 2.2.1)
+
+### Release 2.2.2 and later updated version's source code will be uploaded to the Traditional Chinese version's GitHub. Users are welcome to join the contributor or fork the source code to transplant the updated content of Traditional Chinese version.
+
 The iKanColleCommand project released by the original author NGA user Yu Ye (亖葉, UID42542015) on July 4, 2019, provides a stable Kantai Collection game environment and basic toolkit for iOS users.
 
 [NGA post link](https://ngabbs.com/read.php?tid=17767319)
